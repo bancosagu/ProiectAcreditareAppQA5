@@ -1,0 +1,40 @@
+Check that the main page is loading
+
+Product catalogue is shown
+
+Register test
+
+Login w/ valid credentials
+
+User account data is correct
+
+Check sign out funcionality
+
+Search for a product and make a list with the results / check if the list has the corresponding result
+
+Add item to the cart
+
+Proceed to checkout
+
+Change the quantity of one product in the cart
+
+Price Total is correctly calculated at checkout
+
+Test login to admin mode
+
+Admin is able to create a new product
+
+Admin is able to change the inventory qty / the frontend is updated
+change the stock for a product to 0 after is added to cart, than try to checkout
+
+Admin is able to generate a voucher / it can be applied at checkout / price is not reduced when applying an invalid coupon
+
+Discounted products in Shop have discounted price at checkout
+
+
+
+
+
+
+
+

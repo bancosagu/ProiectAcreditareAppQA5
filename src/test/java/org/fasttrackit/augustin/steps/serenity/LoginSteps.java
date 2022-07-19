@@ -5,17 +5,14 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.augustin.pages.HomePage;
 import org.fasttrackit.augustin.pages.MyAccountPage;
 
-public class LoginSteps extends ScenarioSteps {
+public class LoginSteps extends BaseSteps {
     private HomePage homePage;
     private MyAccountPage myAccountPage;
 
-    @Step
-    public void navigateToHomePage(){
-        homePage.open();
-    }
+
     @Step
     public void navigateToLogin(){
-        homePage.clickMyAccountLink();
+        navigateToMyAccountPage();
     }
 
     @Step
@@ -26,8 +23,16 @@ public class LoginSteps extends ScenarioSteps {
     @Step
     public void clickLoginButton(){
         myAccountPage.clickLoginButton();
+        }
+    @Step
+    public void assertLogin(){
+    }
 
-
+    @Step
+    public void doLogin(String email, String password){
+    navigateToLogin();
+    setCredentials(email, password);
+    clickLoginButton();
 
     }
 
