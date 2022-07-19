@@ -5,30 +5,31 @@ import net.thucydides.core.annotations.Step;
 public class RegisterSteps extends BaseSteps{
 
     @Step
-    public void navigateToMyAccountPage(){
+    public void navigateToRegister(){
         navigateToMyAccountPage();
     }
 
     @Step
-    public void setCredentials(String email){
+    public void setCredentials(String email, String password){
         myAccountPage.setRegisterEmailField(email);
-        myAccountPage.setRegisterPasswordField("123456");
+        myAccountPage.setRegisterPasswordField(password);
     }
     @Step
-    public void clickRegisterButton(){
-        clickRegisterButton();
+    public void clickOnRegisterButton(){
+        myAccountPage.clickRegisterButton();
     }
 
 
 
-    @Step
-    public void verifySuccessMessage(String){
-    myAccountPage.verifyWelcomeMessage(String welcome);
-    }
 
-    @Step
-    public void verifyUsername(String userName){
-        myAccountPage.verifyUsernameRegistration(userName);
+//    @Step
+//    public void verifySuccessMessage(String){
+//    myAccountPage.verifyWelcomeMessage(String welcome);
+//    }
+//
+//    @Step
+//    public void verifyUsername(String userName){
+//        myAccountPage.verifyUsernameRegistration(userName);}
 
-    }
+
 }

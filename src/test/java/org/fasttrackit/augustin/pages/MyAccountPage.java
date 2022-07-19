@@ -16,7 +16,7 @@ public class MyAccountPage extends PageObject {
     private WebElementFacade registerEmailField;
     @FindBy(id = "reg_password")
     private WebElementFacade registerPasswordField;
-    @FindBy(id = "woocommerce-Button button")
+    @FindBy(css = "button[name='register']")
     private WebElementFacade registerButton;
     @FindBy(css = ".user-name")
     private WebElementFacade registeredUsername;
@@ -35,12 +35,12 @@ public class MyAccountPage extends PageObject {
     }
 
 
-    public void setRegisterEmailField(String email){typeInto(registerEmailField);}
-    public void setRegisterPasswordField(String password){typeInto(registerPasswordField);}
+    public void setRegisterEmailField(String email){typeInto(registerEmailField, email);}
+    public void setRegisterPasswordField(String password){typeInto(registerPasswordField, password);}
     public void clickRegisterButton(){clickOn(registerButton);}
 
-    public void verifyUsernameRegistration(String userName){registeredUsername.shouldContainText(userName);
-    public void verifyWelcomeMessage(String welcome){welcomeMessage.shouldContainText("Welcome");
-    }
+//    public void verifyUsernameRegistration(String userName){registeredUsername.shouldContainText(userName);}
+//    public void verifyWelcomeMessage(String welcome){welcomeMessage.shouldContainText("Welcome");}
+
 
 }
