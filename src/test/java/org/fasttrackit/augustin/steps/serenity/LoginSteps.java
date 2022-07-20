@@ -1,13 +1,10 @@
 package org.fasttrackit.augustin.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
-import org.fasttrackit.augustin.pages.HomePage;
-import org.fasttrackit.augustin.pages.MyAccountPage;
+
 
 public class LoginSteps extends BaseSteps {
-    private HomePage homePage;
-    private MyAccountPage myAccountPage;
+
 
 
     @Step
@@ -24,9 +21,21 @@ public class LoginSteps extends BaseSteps {
     public void clickLoginButton(){
         myAccountPage.clickLoginButton();
         }
+
+
+
     @Step
-    public void assertLogin(){
-    }
+    public void verifyWelcomeMessage(String welcome){
+    myAccountPage.verifyWelcomeMessage(welcome);}
+    @Step
+    public void verifyIncorrectPasswordErrorMessage(String error){
+        myAccountPage.verifyIncorrectPasswordError(error);}
+
+    @Step
+    public void verifyInvalidEmailMessage(String error){myAccountPage.verifyInvalidEmailError(error);}
+
+
+
 
     @Step
     public void doLogin(String email, String password){

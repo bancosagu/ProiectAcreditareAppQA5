@@ -4,6 +4,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.augustin.steps.serenity.LoginSteps;
+import org.fasttrackit.augustin.steps.serenity.RegisterSteps;
 import org.fasttrackit.augustin.steps.serenity.SearchSteps;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,7 @@ public class BaseTest {
     @Steps
     protected LoginSteps loginSteps;
     protected SearchSteps searchSteps;
+    protected RegisterSteps registerSteps;
 
 
 

@@ -5,8 +5,7 @@ import net.thucydides.core.annotations.Step;
 public class RegisterSteps extends BaseSteps{
 
     @Step
-    public void navigateToRegister(){
-        navigateToMyAccountPage();
+    public void navigateToRegister(){navigateToMyAccountPage();
     }
 
     @Step
@@ -18,7 +17,10 @@ public class RegisterSteps extends BaseSteps{
     public void clickOnRegisterButton(){
         myAccountPage.clickRegisterButton();
     }
-
+    @Step
+    public void verifyUsername(String username){
+        myAccountPage.verifyRegisteredUsername(username);
+    }
 
 
 

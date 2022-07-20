@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyAccountPage extends PageObject {
 
+
     @FindBy(id = "username")
     private WebElementFacade loginUsernameField;
     @FindBy(id = "password")
@@ -22,7 +23,10 @@ public class MyAccountPage extends PageObject {
     private WebElementFacade registeredUsername;
     @FindBy(css = ".welcome-user")
     private WebElementFacade welcomeMessage;
-
+    @FindBy(css = "li > strong:nth-of-type(1)")
+    private WebElementFacade incorrectPasswordError;
+    @FindBy(css = ".woocommerce-error > li ")
+    private WebElementFacade invalidEmailError;
 
     public void setLoginUsernameField(String email){
         typeInto(loginUsernameField, email);
@@ -38,9 +42,10 @@ public class MyAccountPage extends PageObject {
     public void setRegisterEmailField(String email){typeInto(registerEmailField, email);}
     public void setRegisterPasswordField(String password){typeInto(registerPasswordField, password);}
     public void clickRegisterButton(){clickOn(registerButton);}
-
+    public void verifyRegisteredUsername(String username){registeredUsername.shouldContainOnlyText(username);}
 //    public void verifyUsernameRegistration(String userName){registeredUsername.shouldContainText(userName);}
-//    public void verifyWelcomeMessage(String welcome){welcomeMessage.shouldContainText("Welcome");}
-
+    public void verifyWelcomeMessage(String welcome){welcomeMessage.shouldContainText(welcome);}
+    public void verifyIncorrectPasswordError(String error){incorrectPasswordError.shouldContainText(error);}
+    public void verifyInvalidEmailError(String error){invalidEmailError.shouldContainText(error);}
 
 }
