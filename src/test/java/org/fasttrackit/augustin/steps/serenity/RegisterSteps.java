@@ -5,7 +5,8 @@ import net.thucydides.core.annotations.Step;
 public class RegisterSteps extends BaseSteps{
 
     @Step
-    public void navigateToRegister(){navigateToMyAccountPage();
+    public void navigateToRegister(){
+        navigateToMyAccountPage();
     }
 
     @Step

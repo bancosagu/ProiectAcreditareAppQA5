@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
-public class ShopPage extends PageObject {
+public class ShopPage extends BasePage {
 
 
     @FindBy(css = "[aria-label='Add “Belt” to your cart']")
@@ -26,6 +26,10 @@ public class ShopPage extends PageObject {
     @FindBy(css = "[aria-label='Add “Beanie” to your cart']")
     private WebElementFacade addToCartBeanie;
 
+    @FindBy(css = ".post-27 .attachment-shop_catalog")
+    private WebElementFacade beltProductPage;
+
+
     public void addProductBeltToCart(){clickOn(addToCartBelt);}
     public void addProductCapToCart(){clickOn(addToCartCap);}
     public void clickSelectOptionsForHoodie(){clickOn(sellectOptionsForHoodie);}
@@ -36,4 +40,5 @@ public class ShopPage extends PageObject {
     public void addProductHoodieToCart(){clickOn(addToCartHoodie);}
     public void addProductBeanieToCart(){clickOn(addToCartBeanie);}
 
+    public void openBeltProductPage(){clickOn(beltProductPage);}
 }

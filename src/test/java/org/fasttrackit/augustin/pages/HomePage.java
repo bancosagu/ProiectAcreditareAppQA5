@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends PageObject {
 
-    @FindBy(id = ".searchform [name=s]")
+    @FindBy(css = ".search-form .search-field")
     private WebElementFacade searchField;
-    @FindBy(css = ".search-form .searchsubmit ")
+    @FindBy(css = ".search-form .searchsubmit")
     private WebElementFacade searchIcon;
     @FindBy(id = "menu-item-70")
     private WebElementFacade myAccountLink;
@@ -21,8 +21,8 @@ public class HomePage extends PageObject {
     private WebElementFacade cartLink;
     @FindBy(id = "menu-item-73")
     private WebElementFacade shopLink;
-
-
+    @FindBy(css = ".logout")
+    private WebElementFacade logoutButton;
 
 
     public void setSearchField(String keyword){typeInto(searchField, keyword);}
@@ -31,5 +31,6 @@ public class HomePage extends PageObject {
     public void clickCheckoutLink(){clickOn(checkoutLink);}
     public void clickCartLink(){clickOn(cartLink);}
     public void clickShopLink(){clickOn(shopLink);}
+    public void clickLogoutButton(){clickOn(logoutButton);}
 
 }

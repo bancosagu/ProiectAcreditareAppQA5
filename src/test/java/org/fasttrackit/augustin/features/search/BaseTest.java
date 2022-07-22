@@ -3,9 +3,7 @@ package org.fasttrackit.augustin.features.search;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.augustin.steps.serenity.LoginSteps;
-import org.fasttrackit.augustin.steps.serenity.RegisterSteps;
-import org.fasttrackit.augustin.steps.serenity.SearchSteps;
+import org.fasttrackit.augustin.steps.serenity.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
@@ -18,9 +16,23 @@ public class BaseTest {
 
     @Steps
     protected LoginSteps loginSteps;
+
+    @Steps
     protected SearchSteps searchSteps;
+
+    @Steps
     protected RegisterSteps registerSteps;
 
+    @Steps
+    protected CartSteps cartSteps;
 
+    @Steps
+    protected AdminLoginSteps adminLoginSteps;
+
+    @Steps
+    protected ProductReviewSteps productReviewSteps;
+
+    @Steps
+    protected LogoutSteps logoutSteps;
 
 }

@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
-public class MyAccountPage extends PageObject {
+public class MyAccountPage extends BasePage {
 
 
     @FindBy(id = "username")
@@ -42,7 +42,7 @@ public class MyAccountPage extends PageObject {
     public void setRegisterEmailField(String email){typeInto(registerEmailField, email);}
     public void setRegisterPasswordField(String password){typeInto(registerPasswordField, password);}
     public void clickRegisterButton(){clickOn(registerButton);}
-    public void verifyRegisteredUsername(String username){registeredUsername.shouldContainOnlyText(username);}
+    public void verifyRegisteredUsername(String username){registeredUsername.shouldContainText(username);}
 //    public void verifyUsernameRegistration(String userName){registeredUsername.shouldContainText(userName);}
     public void verifyWelcomeMessage(String welcome){welcomeMessage.shouldContainText(welcome);}
     public void verifyIncorrectPasswordError(String error){incorrectPasswordError.shouldContainText(error);}

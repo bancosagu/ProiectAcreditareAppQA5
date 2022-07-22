@@ -11,7 +11,10 @@ public class BaseSteps extends ScenarioSteps {
     public HomePage homePage;
     public MyAccountPage myAccountPage;
     public ShopPage shopPage;
-
+    public SearchResultsPage searchResultsPage;
+    public AdminLoginPage adminLoginPage;
+    public AdminDashboardPage adminDashboardPage;
+    public BeltProductPage beltProductPage;
     @Step
     public void navigateToMyAccountPage(){
         homePage.open();
@@ -19,7 +22,7 @@ public class BaseSteps extends ScenarioSteps {
     }
 
     @Step
-    public void navigateToAdminPage(){
+    public void navigateToAdminLoginPage(){
         getDriver().get(Constants.ADMIN_BASE_URL);
     }
 

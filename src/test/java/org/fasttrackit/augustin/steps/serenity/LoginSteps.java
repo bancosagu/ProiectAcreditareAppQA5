@@ -9,18 +9,15 @@ public class LoginSteps extends BaseSteps {
 
     @Step
     public void navigateToLogin(){
-        navigateToMyAccountPage();
-    }
+        navigateToMyAccountPage();}
 
     @Step
     public void setCredentials(String email, String password){
         myAccountPage.setLoginUsernameField(email);
-        myAccountPage.setLoginPasswordField(password);
-        }
+        myAccountPage.setLoginPasswordField(password);}
     @Step
     public void clickLoginButton(){
-        myAccountPage.clickLoginButton();
-        }
+        myAccountPage.clickLoginButton();}
 
 
 
@@ -41,8 +38,8 @@ public class LoginSteps extends BaseSteps {
     public void doLogin(String email, String password){
     navigateToLogin();
     setCredentials(email, password);
-    clickLoginButton();
+    clickLoginButton();}
 
-    }
+
 
 }
