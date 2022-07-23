@@ -11,6 +11,11 @@ public class BeltProductPage extends PageObject {
     private WebElementFacade commentField;
     @FindBy(id = "submit")
     private WebElementFacade submitButton;
+    @FindBy(css = ".stars .star-4")
+    private WebElementFacade rating4Stars;
+    @FindBy(css = "#comment-774 .description > p")
+    private WebElementFacade approvedComment;
+
 
     public void openReviewsTab(){
         clickOn(reviewsTab);
@@ -18,8 +23,12 @@ public class BeltProductPage extends PageObject {
     public void setCommentField(String comment){
         typeInto(commentField, comment);
     }
+    public void giveRating4Stars(){clickOn(rating4Stars);}
     public void clickSubmitButton(){
         clickOn(submitButton);
+    }
+    public void verifyApprovedComment(String comment){
+        approvedComment.shouldContainText(comment);
     }
 
 }

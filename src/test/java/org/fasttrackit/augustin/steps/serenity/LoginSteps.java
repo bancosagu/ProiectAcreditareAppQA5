@@ -1,6 +1,7 @@
 package org.fasttrackit.augustin.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
+import org.fasttrackit.augustin.utils.Constants;
 
 
 public class LoginSteps extends BaseSteps {
@@ -35,10 +36,11 @@ public class LoginSteps extends BaseSteps {
 
 
     @Step
-    public void doLogin(String email, String password){
+    public void doLogin(){
     navigateToLogin();
-    setCredentials(email, password);
-    clickLoginButton();}
+    setCredentials(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+    clickLoginButton();
+    verifyWelcomeMessage("Welcome " + Constants.USERNAME + " !");}
 
 
 

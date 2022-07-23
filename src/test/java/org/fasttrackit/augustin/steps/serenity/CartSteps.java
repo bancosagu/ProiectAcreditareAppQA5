@@ -16,12 +16,18 @@ public class CartSteps extends BaseSteps{
 
 
     @Step
-    public void addBeltAndCapToCartAndCheckPrice(){
+    public void addBeltAndCapToCart(){
         homePage.open();
         homePage.clickShopLink();
         shopPage.addProductBeltToCart();
         shopPage.addProductCapToCart();
-        homePage.clickCartLink();
 
+
+    }
+    @Step
+    public void checkPriceForBeltAndCap(){
+        homePage.clickCartLink();
+        cartPage.isCartSubtotalCorrect();
+        cartPage.isGrandTotalPriceCorrect();
     }
 }

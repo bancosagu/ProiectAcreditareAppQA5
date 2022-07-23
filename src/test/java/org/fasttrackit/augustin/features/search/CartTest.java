@@ -19,10 +19,14 @@ public class CartTest extends BaseTest{
 
     @Test
     public void addToCartTest(){
-        cartSteps.addBeltAndCapToCartAndCheckPrice();
+        cartSteps.addBeltAndCapToCart();
     }
 
-
+    @Test
+    public void addToCartAndCheckPrice(){
+        cartSteps.addBeltAndCapToCart();
+        cartSteps.checkPriceForBeltAndCap();
+    }
 
 
 

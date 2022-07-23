@@ -8,4 +8,11 @@ public class LogoutSteps extends BaseSteps{
     public void logout(){
         homePage.clickLogoutButton();
     }
+    @Step
+    public void adminLogout(){
+        adminDashboardPage.clickAdminBarMenuPop();
+        adminDashboardPage.clickAdminLogoutButton();
+        }
+
+
 }
